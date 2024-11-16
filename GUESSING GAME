@@ -7,13 +7,13 @@ st.write("Welcome to the guessing game. Can you guess the number I'm thinking of
 
 # Initialize game state in session state
 if "number_to_guess" not in st.session_state:
-    st.session_state.number_to_guess = random.randint(1, 100)
+    st.session_state.number_to_guess = random.randint(1, 150)
 
 if "attempts" not in st.session_state:
     st.session_state.attempts = 0
 
 # Input from the user
-guess = st.number_input("Enter your guess (1-100):", min_value=1, max_value=100, step=1)
+guess = st.number_input("Enter your guess (1-150):", min_value=1, max_value=150, step=1)
 
 if st.button("Submit Guess"):
     st.session_state.attempts += 1
@@ -26,5 +26,5 @@ if st.button("Submit Guess"):
         st.write(f"You guessed it in {st.session_state.attempts} attempts!")
         # Reset game
         if st.button("Play Again"):
-            st.session_state.number_to_guess = random.randint(1, 100)
+            st.session_state.number_to_guess = random.randint(1, 150)
             st.session_state.attempts = 0
