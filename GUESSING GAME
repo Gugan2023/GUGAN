@@ -2,7 +2,7 @@ import random
 import streamlit as st
 
 # Title and Introduction
-st.title("Guess the Number!")
+st.title("Guess the Number Friend!")
 st.write("Welcome to the guessing game. Can you guess the number I'm thinking of?")
 
 # Initialize game state in session state
