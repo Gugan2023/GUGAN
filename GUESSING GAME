@@ -12,8 +12,7 @@ if "number_to_guess" not in st.session_state:
 if "attempts" not in st.session_state:
     st.session_state.attempts = 0
 
-# Input from the user
-guess = st.number_input("Enter your guess (1-50):", min_value=1, max_value=50, step=1)
+guess = st.number_input("Enter your guess (1 - 50):", min_value=1, max_value=50, step=1)
 
 if st.button("Submit Guess"):
     st.session_state.attempts += 1
